@@ -59,48 +59,6 @@ KEY MAPPINGS					*textobj-wiw-key-mappings*
 	* In this section, "word" is a word for humans, not for Vim.
 	* In examples, [] represents the cursor or the selection.
 
-MOVE ~
-
-	<Plug>(textobj-wiw-n)			*<Plug>(textobj-wiw-n)*
-
-			[count] words forward.
-
-			Before: Lorem_ipsum_do[l]or_sit_amet
-			After : Lorem_ipsum_dolor_[s]it_amet
-
-			Before: LoremIpsumDo[l]orSitAmet
-			After : LoremIpsumDolor[S]itAmet
-
-	<Plug>(textobj-wiw-p)			*<Plug>(textobj-wiw-p)*
-
-			[count] words backward.
-
-			Before: Lorem_ipsum_do[l]or_sit_amet
-			After : Lorem_ipsum_[d]olor_sit_amet
-
-			Before: LoremIpsumDo[l]orSitAmet
-			After : LoremIpsum[D]olorSitAmet
-
-	<Plug>(textobj-wiw-N)			*<Plug>(textobj-wiw-N)*
-
-			Forward to the end of word [count].
-
-			Before: Lorem_ipsum_do[l]or_sit_amet
-			After : Lorem_ipsum_dolo[r]_sit_amet
-
-			Before: LoremIpsumDo[l]orSitAmet
-			After : LoremIpsumDolo[r]SitAmet
-
-	<Plug>(textobj-wiw-P)			*<Plug>(textobj-wiw-P)*
-
-			Backward to the end of word [count].
-
-			Before: Lorem_ipsum_do[l]or_sit_amet
-			After : Lorem_ipsu[m]_dolor_sit_amet
-
-			Before: LoremIpsumDo[l]orSitAmet
-			After : LoremIpsu[m]DolorSitAmet
-
 SELECT ~
 
 	<Plug>(textobj-wiw-a)			*<Plug>(textobj-wiw-a)*
@@ -129,13 +87,8 @@ DEFAULT KEY MAPPINGS ~
 					*textobj-wiw-default-key-mappings*
 	lhs	Modes	rhs
 	---------------------------------------
-	,w	nxo	<Plug>(textobj-wiw-n)
-	,b	nxo	<Plug>(textobj-wiw-p)
-	,e	nxo	<Plug>(textobj-wiw-N)
-	,ge	nxo	<Plug>(textobj-wiw-P)
-
-	a,w	xo	<Plug>(textobj-wiw-a)
-	i,w	xo	<Plug>(textobj-wiw-i)
+	ah	xo	<Plug>(textobj-wiw-a)
+	ih	xo	<Plug>(textobj-wiw-i)
 
 	
 	You can change the prefix of these key mappings by setting
@@ -148,22 +101,6 @@ DEFAULT KEY MAPPINGS ~
 	You can also use |:TextobjWiwDefaultKeyMappings| command to redefine
 	these key mappings. This command doesn't override existing {lhs}s
 	unless [!] is given.
-
-------------------------------------------------------------------------------
-VARIABLES					*textobj-wiw-variables*
-
-				*g:textobj_wiw_default_key_mappings_prefix*
-	g:textobj_wiw_default_key_mappings_prefix
-
-		The prefix key of textobj-wiw's default key mappings.
-
-		Default: ","
-
-				*g:textobj_wiw_no_default_key_mappings*
-	g:textobj_wiw_no_default_key_mappings
-
-		If defined, textobj-wiw doesn't define its default key
-		mappings.
 
 ==============================================================================
 CHANGELOG					*textobj-wiw-changelog*
