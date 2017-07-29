@@ -39,8 +39,8 @@ set cpo&vim
 " Key-mappings
 call textobj#user#plugin('wiw', {
       \ '-': {
-      \   'select-a' : 'am', '*select-a-function*': 'textobj#wiw#select_a',
-      \   'select-i' : 'im', '*select-i-function*': 'textobj#wiw#select_i',
+      \   'select-a' : 'ah', '*select-a-function*': 'textobj#wiw#select_a',
+      \   'select-i' : 'ih', '*select-i-function*': 'textobj#wiw#select_i',
       \ }
       \})
 
